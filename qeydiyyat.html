@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomixaz | Qeydiyyat</title>
+
+  <!-- Sənin əsas CSS-in -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ✅ Qeydiyyat Formu -->
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <h1>Qeydiyyat</h1>
+      <p>Yeni hesab yarat</p>
+
+      <form id="registerForm">
+        <input id="regEmail" class="auth-input" type="email" placeholder="E-mail" required />
+        <input id="regPass" class="auth-input" type="password" placeholder="Şifrə" required />
+        <button class="auth-btn" type="submit">Qeydiyyatdan keç</button>
+      </form>
+
+      <div class="auth-links">
+        <a href="giris.html">Girişə qayıt</a>
+        <a class="register" href="index.html">Ana səhifə</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Toast -->
+  <div id="toast" class="toast">
+    <span id="toastText"></span>
+  </div>
+
+  <!-- ✅ Qeydiyyat məntiqi bu fayldadır -->
+  <script src="auth.js"></script>
+
+</body>
+</html>

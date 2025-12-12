@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomixaz | Geri Qaytarma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cart-bg">
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Nomix">
+            <span>Nomix</span>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Ana səhifə</a></li>
+                <li><a href="index.html#support">Dəstək</a></li>
+                <li><a href="geri-qaytarma.html">Geri qaytarma</a></li>
+                <li><a href="elaqe.html">Əlaqə</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== GERİ QAYTARMA HERO ===== -->
+    <section class="return-page">
+
+        <div class="return-hero">
+            <h1> Geri Qaytarma & Mübadilə</h1>
+            <p>Nomix-də alış-veriş rahatdır — qaytarma prosesi isə daha da asandır.</p>
+        </div>
+
+        <div class="return-wrapper">
+
+            <div class="return-grid">
+                <div class="return-card">
+                    <span class="icon">📦</span>
+                    <h3>Geri Qaytarma Şərtləri</h3>
+                    <ul>
+                        <li>Məhsul zədəlidirsə</li>
+                        <li>Səhv məhsul göndərilibsə</li>
+                        <li>Məhsul istifadə edilməyibsə</li>
+                    </ul>
+                </div>
+
+                <div class="return-card">
+                    <span class="icon">⏳</span>
+                    <h3>Müddət</h3>
+                    <p>Məhsulu <b>24 saat</b> ərzində qaytara bilərsiniz.</p>
+                </div>
+
+                <div class="return-card">
+                    <span class="icon">💳</span>
+                    <h3>Pulun Qaytarılması</h3>
+                    <p>Ödəniş <b>5-7 iş günü</b> ərzində kartınıza geri köçürülür.</p>
+                </div>
+
+                <div class="return-card">
+                    <span class="icon">🚚</span>
+                    <h3>Göndərilmə Qaydası</h3>
+                    <p>Məhsul orijinal qutusu və qəbzi ilə geri yollanmalıdır.</p>
+                </div>
+
+            </div>
+            <div class="return-form-btn-box">
+                <a href="geri-qaytarma-form.html" class="return-form-btn">
+                  📄 Geri Qaytarma Formunu Doldur
+                </a>
+            </div>
+              
+        </div>
+    </section>
+<!-- ✅ Toast -->
+<div id="toast" class="toast">
+    <span id="toastText">Məhsul səbətə əlavə edildi ✅</span>
+  </div>
+  <div id="toast" class="toast">
+    <span id="toastText"></span>
+  </div>
+  <script src="auth.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("loggedUser")) || null;
+    const form = document.getElementById("returnForm") || document.querySelector("form");
+
+    if (!form) return;
+
+    if (!user) {
+      if (typeof showToast === "function") showToast("Formu doldurmaq üçün giriş edin ❗");
+      form.querySelectorAll("input, textarea, select, button").forEach(el => el.disabled = true);
+    }
+  });
+</script>
+</body>
+</html>

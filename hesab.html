@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomix | Hesabım</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="account-bg">
+  <!-- HEADER (indexdəki eyni) -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Nomix Logo" class="logo">
+      <span>Nomix</span>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Ana səhifə</a></li>
+        <li><a href="index.html#support">Dəstək</a></li>
+        <li><a href="geri-qaytarma.html">Geri qaytarma</a></li>
+        <li><a href="elaqe.html">Əlaqə</a></li>
+      </ul>
+    </nav>
+
+    <div class="user-section">
+      <a href="giris.html" class="user-link">
+        <i class="fa-solid fa-user"></i><span>Giriş</span>
+      </a>
+
+      <a href="card.html" class="user-link cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+      </a>
+      <!-- logout düyməsini auth.js əlavə edəcək -->
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <div class="account-page">
+    <aside class="account-sidebar">
+      <div class="account-userbox">
+      </div>
+      <ul class="account-menu">
+        <li class="active">
+          <a class="acc-link" href="hesab.html"><i class="fa-regular fa-id-card"></i> Şəxsi məlumatlar</a>
+        </li>
+      
+        <li>
+          <a class="acc-link" href="sifarislerim.html"><i class="fa-solid fa-box"></i> Sifarişlərim</a>
+        </li>
+      
+    <main class="account-content">
+      <div class="account-card">
+        <div class="card-head">
+          <h1>Şəxsi məlumatlar</h1>
+          <p>Məlumatlarınızı yeniləyə bilərsiniz.</p>
+        </div>
+
+        <form id="profileForm" class="profile-form">
+          <div class="grid-2">
+            <div class="field">
+              <label>Ad</label>
+              <input id="pfName" type="text" placeholder="Ad" />
+            </div>
+            <div class="field">
+              <label>Soyad</label>
+              <input id="pfSurname" type="text" placeholder="Soyad" />
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label>Telefon</label>
+              <input id="pfPhone" type="tel" placeholder="+994 50 123 45 67" />
+            </div>
+            <div class="field">
+              <label>Doğum tarixi</label>
+              <input id="pfBirth" type="date" />
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label>Cins</label>
+              <select id="pfGender">
+                <option value="">Seçin</option>
+                <option value="qadin">Qadın</option>
+                <option value="kisi">Kişi</option>
+                <option value="demek-istemirem">Demək istəmirəm</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Email (dəyişmir)</label>
+              <input id="pfEmail" type="email" disabled />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="save-btn" type="submit">
+              <i class="fa-solid fa-floppy-disk"></i> Yadda saxla
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"><span id="toastText"></span></div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

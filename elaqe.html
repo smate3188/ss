@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomixaz | Əlaqə</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cart-bg">
+<header>
+  <div class="logo">
+    <img src="logo.jpeg" alt="Nomix">
+    <span>Nomix</span>
+  </div>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Ana səhifə</a></li>
+      <li><a href="index.html#support">Dəstək</a></li>
+      <li><a href="geri-qaytarma.html">Geri qaytarma</a></li>
+      <li><a href="elaqe.html">Əlaqə</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contact-page">
+
+  <div class="contact-hero">
+    <h1>📞 Bizimlə Əlaqə</h1>
+    <p>Sualınız, təklifiniz və ya probleminiz varsa, bizə yazın!</p>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <!-- SOL TƏRƏF – MƏLUMATLAR -->
+    <div class="contact-info">
+      <h3>📍 Əlaqə Məlumatları</h3>
+
+      <p>📞 Əlaqə nömrəsi: 055 595 85 65</p>
+      <p>☎  Çağrı mərkəzi: *777</p>
+      <p>📧 Email: nomix.aztrio@gmail.com</p>
+
+      <h4>🗺 Xəritə</h4>
+      <iframe
+         src="https://maps.google.com/maps?q=Ağ%20Şəhər%20Baku&t=&z=15&ie=UTF8&iwloc=&output=embed"
+         width="100%"
+         height="220"
+         style="border-radius:12px; border:0;">
+      </iframe>
+
+    </div>
+
+    <!-- SAĞ TƏRƏF – FORM -->
+    <div class="contact-box">
+      <h3><i class="fa-regular fa-envelope"></i> Bizə mesaj göndər</h3>
+    
+      <form id="contactFormElaqe">
+        <input type="text" id="elaqe_name" placeholder="Ad Soyad" required>
+        <input type="email" id="elaqe_email" placeholder="Email" required>
+        <input type="tel" id="elaqe_phone" placeholder="Telefon">
+        <textarea id="elaqe_message" placeholder="Mesajınız" rows="5" required></textarea>
+    
+        <button type="submit" class="send-btn">
+          <i class="fa-regular fa-paper-plane"></i> Göndər
+        </button>
+      </form>
+    </div>    
+
+  </div>
+</section>
+
+<script>
+function sendContact() {
+  alert("✅ Mesajınız uğurla göndərildi!");
+  window.location.href = "index.html";
+}
+</script>
+<script>
+  document.getElementById("contactFormElaqe").addEventListener("submit", function(e){
+    e.preventDefault();
+  
+    const name = document.getElementById("elaqe_name").value.trim();
+    const email = document.getElementById("elaqe_email").value.trim();
+    const phone = document.getElementById("elaqe_phone").value.trim();
+    const message = document.getElementById("elaqe_message").value.trim();
+  
+    const to = "nomix.aztrio@gmail.com";
+    const subject = encodeURIComponent("Nomix Əlaqə Mesajı");
+    const body = encodeURIComponent(
+      `Ad Soyad: ${name}\nEmail: ${email}\nTelefon: ${phone}\n\nMesaj:\n${message}`
+    );
+  
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    document.getElementById("contactFormElaqe").reset();
+
+  });
+</script>
+<!-- ✅ Toast -->
+<div id="toast" class="toast">
+  <span id="toastText">Məhsul səbətə əlavə edildi ✅</span>
+</div>
+<div id="toast" class="toast">
+  <span id="toastText"></span>
+</div>
+<script src="auth.js"></script>  
+</body>
+</html>

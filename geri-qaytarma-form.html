@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomixaz | Geri Qaytarma Formu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cart-bg">
+
+<header>
+  <div class="logo">
+    <img src="logo.jpeg">
+    <span>Nomix</span>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Ana səhifə</a></li>
+      <li><a href="geri-qaytarma.html">Geri qaytarma</a></li>
+      <li><a href="elaqe.html">Əlaqə</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="popup-content" style="margin:40px auto; max-width:450px;">
+  <h3>📄 Geri Qaytarma Müraciəti</h3>
+
+  
+
+  <form id="returnMailForm">
+    <input type="text" id="ret_product" placeholder="Məhsulun adı" required>
+    <input type="text" id="ret_order" placeholder="Sifariş nömrəsi" required>
+  
+    <textarea id="ret_reason" placeholder="Geri qaytarma səbəbi" required></textarea>
+  
+    <h4>📍 Məhsul haradan götürülsün?</h4>
+    <input type="text" id="ret_city" placeholder="Şəhər" required>
+    <input type="text" id="ret_address" placeholder="Küçə / bina / mənzil" required>
+  
+    <button type="submit" class="confirm-order">✅ Müraciəti göndər</button>
+  
+    <a href="geri-qaytarma.html">
+      <button type="button" class="close-popup">⬅ Geri qayıt</button>
+    </a>
+  </form>
+</div>  
+<script>
+  document.getElementById("returnMailForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const product = document.getElementById("ret_product").value.trim();
+    const orderNo = document.getElementById("ret_order").value.trim();
+    const reason  = document.getElementById("ret_reason").value.trim();
+    const city    = document.getElementById("ret_city").value.trim();
+    const address = document.getElementById("ret_address").value.trim();
+
+    const to = "nomix.aztrio@gmail.com";
+    const subject = encodeURIComponent("Nomix Geri Qaytarma Müraciəti");
+    const body = encodeURIComponent(
+`Məhsul: ${product}
+Sifariş nömrəsi: ${orderNo}
+
+Geri qaytarma səbəbi:
+${reason}
+
+Götürülmə ünvanı:
+Şəhər: ${city}
+Ünvan: ${address}`
+    );
+
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+
+    // istəyirsənsə form sıfırlansın:
+    this.reset();
+
+    // istəyirsənsə index-ə yönləndir:
+    // setTimeout(() => window.location.href = "index.html", 400);
+  });
+</script>
+<div id="toast" class="toast">
+  <span id="toastText"></span>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

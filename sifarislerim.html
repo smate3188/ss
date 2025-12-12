@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomix | Sifarişlərim</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="account-bg">
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Nomix Logo" class="logo">
+      <span>Nomix</span>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Ana səhifə</a></li>
+        <li><a href="index.html#support">Dəstək</a></li>
+        <li><a href="geri-qaytarma.html">Geri qaytarma</a></li>
+        <li><a href="elaqe.html">Əlaqə</a></li>
+      </ul>
+    </nav>
+
+    <div class="user-section">
+      <a href="giris.html" class="user-link">
+        <i class="fa-solid fa-user"></i><span>Giriş</span>
+      </a>
+
+      <a href="card.html" class="user-link cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="account-page">
+    <aside class="account-sidebar">
+      <div class="account-userbox">
+      </div>
+
+      <ul class="account-menu">
+        <li>
+          <a class="acc-link" href="hesab.html"><i class="fa-regular fa-id-card"></i> Şəxsi məlumatlar</a>
+        </li>
+        <li class="active">
+          <a class="acc-link" href="sifarislerim.html"><i class="fa-solid fa-box"></i> Sifarişlərim</a>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="account-content">
+      <div class="account-card">
+        <div class="card-head">
+          <h1>Sifarişlərim</h1>
+          <p>Burada təsdiqlənmiş sifarişləriniz görünəcək.</p>
+        </div>
+
+        <div id="ordersList" class="orders-list"></div>
+
+        <div id="ordersEmpty" class="orders-empty" style="display:none;">
+          <i class="fa-regular fa-face-frown"></i>
+          <h3>Hələ sifariş yoxdur</h3>
+          <p>İlk sifarişinizi etmək üçün məhsullara baxın.</p>
+          <a class="orders-cta" href="index.html">Məhsullara keç</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"><span id="toastText"></span></div>
+
+  <script src="auth.js"></script>
+  <script src="orders.js"></script>
+</body>
+</html>

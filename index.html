@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomixaz | Online Alış-Veriş Platforması</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Nomix Logo" class="logo">
+      <span>Nomix</span>
+    </div>
+  
+    <!-- ✅ HAMBURGER (mobil üçün) -->
+    <button class="menu-toggle" aria-label="Menyu aç/bağla">
+      <span></span><span></span><span></span>
+    </button>
+  
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html">Ana səhifə</a></li>
+        <li><a href="#support">Dəstək</a></li>
+        <li><a href="geri-qaytarma.html">Geri qaytarma</a></li>
+        <li><a href="elaqe.html">Əlaqə</a></li>
+      </ul>
+    </nav>
+  
+    <div class="user-section">
+      <a href="giris.html" class="user-link">
+        <i class="fa-solid fa-user"></i><span>Giriş</span>
+      </a>
+    
+      <a href="card.html" class="user-link cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+  
+  
+  <div class="slider-container">
+
+    <button class="slider-btn left" onclick="prevSlide()">❮</button>
+  
+    <div class="slider">
+      <img src="mehsullar.png" class="slide active">
+      <img src="3.jpg" class="slide">
+      <img src="2.jpg" class="slide">
+    </div>
+  
+    <button class="slider-btn right" onclick="nextSlide()">❯</button>
+  
+  </div>
+  
+  <div class="products-container">
+  <div class="product-card"
+   data-name="Kənd Yumurtası"
+   data-price="0.35"
+   data-image="yumurta.jpg">
+      <div class="product-badge">Təbii məhsul</div>
+      <img src="yumurta.jpg" alt="Kənd Yumurtası">
+      <h3>Kənd Yumurtası</h3>
+      <div class="rating">
+        ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+      </div>
+      <div class="price">0.35₼ <span>/ 1 dənə </span></div>
+      <button class="add-to-cart">Səbətə əlavə et</button>
+    </div>
+
+  <div class="product-card"
+   data-name="Şor"
+   data-price="3"
+   data-image="şor.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="şor.jpg" alt="Şor">
+    <h3>Şor</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">3 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+    data-name="Qatıq"
+    data-price="4"
+    data-image="qatiq.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="qatiq.jpg" alt="Qatıq">
+    <h3>Qatıq</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">4 ₼ <span>/ 3 litr</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+   data-name="Pendir"
+   data-price="7"
+   data-image="pendir.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="pendir.jpg" alt="Pendir">
+    <h3>Pendir</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">7 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+   data-name="Süd"
+   data-price="2"
+   data-image="süd.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="süd.jpg" alt="Süd">
+    <h3>Süd</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">2 ₼ <span>/ 1 lt</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+   data-name="Ərik qurusu (dənəsiz)"
+   data-price="13"
+   data-image="erik tumsuz qurusu.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="erik tumsuz qurusu.jpg" alt="Ərik qurusu (dənəsiz)">
+    <h3>Ərik quru (dənəsiz)</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">13 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+   data-name="Ərik qurusu (dənəli)"
+   data-price="10"
+   data-image="erik qurusu tumlu.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="erik qurusu tumlu.jpg" alt="Ərik qurusu (dənəsiz)">
+    <h3>Ərik qurusu (dənəli)</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">10 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Alma qurusu"
+  data-price="8"
+  data-image="alma qurusu.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="alma qurusu.jpg" alt="Alma qurusu">
+    <h3>Alma qurusu</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">8 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="kismis"
+  data-price="6"
+  data-image="kismis.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="kismis.jpg" alt="Kişmiş">
+    <h3>Kişmiş</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">6 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Bal"
+  data-price="40"
+  data-image="bal.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="bal.jpg" alt="Bal">
+    <h3>Bal</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">40 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Alma (qırmızı)"
+  data-price="3.5"
+  data-image="qirmizi alma.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="qirmizi alma.jpg" alt="Alma qırmızı">
+    <h3>Alma (qırmızı)</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">3.5 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Alma (yaşıl)"
+  data-price="3.5"
+  data-image="yasil alma.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="yasil alma.jpg" alt="Alma yaşıl">
+    <h3>Alma (yaşıl)</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">3.5 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Alma (sarı)"
+  data-price="4"
+  data-image="sari alma.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="sari alma.jpeg" alt="Alma sarı">
+    <h3>Alma (sarı)</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">4 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Armud"
+  data-price="4"
+  data-image="armud.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="armud.jpg" alt="Armud">
+    <h3>Armud</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">4 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Nar"
+  data-price="3"
+  data-image="nar.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="nar.jpg" alt="Nar">
+    <h3>Nar</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">3 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Mandalin"
+  data-price="3"
+  data-image="mandalin.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="mandalin.webp" alt="Mandalin">
+    <h3>Mandalin</h3>
+          <div class="rating">
+        ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+      </div>
+    <div class="price">3 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Portağal"
+  data-price="3.5"
+  data-image="portagal.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="portagal.jpg" alt="Portağal">
+    <h3>Portağal</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">3.5 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Karalyok"
+  data-price="2.6"
+  data-image="xurma meyve.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="xurma meyve.jpg" alt="Karalyok">
+    <h3>Karalyok</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">2.6 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Xurma"
+  data-price="2"
+  data-image="xurma.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="xurma.jpg" alt="Xurma">
+    <h3>Xurma</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">2 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Üzüm"
+  data-price="1.69"
+  data-image="uzum ag.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="uzum ag.jpg" alt="Üzüm">
+    <h3>Üzüm</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">1.69 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Üzüm qara"
+  data-price="2.3"
+  data-image="uzum qara.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="uzum qara.jpg" alt="Üzüm qara">
+    <h3>Üzüm (qara)</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">2.3 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Pomidor"
+  data-price="2.5"
+  data-image="pomidor.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="pomidor.jpg" alt="Pomidor">
+    <h3>Pomidor</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">2.5 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Xiyar"
+  data-price="3"
+  data-image="xiyar.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="xiyar.jpg" alt="Xiyar">
+    <h3>Xiyar</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">3 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Kök"
+  data-price="0.9"
+  data-image="kok.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="kok.jpg" alt="Kök">
+    <h3>Kök</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">0.9 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Kartof"
+  data-price="1.5"
+  data-image="kartof.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="kartof.jpg" alt="Kartof">
+    <h3>Kartof</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">1.5 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Soğan"
+  data-price="1.4"
+  data-image="sogan.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="sogan.jpg" alt="Soğan">
+    <h3>Soğan</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">1.4 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Limon"
+  data-price="5.5"
+  data-image="limon.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="limon.jpg" alt="Limon">
+    <h3>Limon</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">5.5 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Qoz"
+  data-price="5"
+  data-image="qoz.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="qoz.jpg" alt="Qoz">
+    <h3>Qoz</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">5 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+
+  <div class="product-card"
+  data-name="Fındıq"
+  data-price="8"
+  data-image="findiq.jpg">
+    <div class="product-badge">Təbii məhsul</div>
+    <img src="findiq.jpg" alt="Fındıq">
+    <h3>Fındıq</h3>
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+    </div>
+    <div class="price">8 ₼ <span>/ 1 kq</span></div>
+    <button class="add-to-cart">Səbətə əlavə et</button>
+  </div>
+</div>
+<section class="support-section" id="support">
+  <h2>Dəstək Mərkəzi</h2>
+  <p>Problem yaşayırsınız? Biz sizə kömək etməyə hazırıq!</p>
+
+  <div class="support-container">
+
+    <!-- FAQ -->
+    <div class="support-box">
+      <h3>📩 Bizə yaz</h3>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Adınız" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" placeholder="Mesajınız" required></textarea>
+        <button type="submit">Göndər</button>
+      </form>
+    </div>
+    
+  </div>
+</section>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+  
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+  
+    const to = "nomix.aztrio@gmail.com";
+    const subject = encodeURIComponent("Nomix Dəstək Mesajı");
+    const body = encodeURIComponent(
+      `Ad: ${name}\nEmail: ${email}\n\nMesaj:\n${message}`
+    );
+  
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // ✅ TOAST FUNKSİYASI (BUNU BURDA SAXLA)
+    let toastTimer;
+
+      function showToast(msg){
+        const toast = document.getElementById("toast");
+        const text = document.getElementById("toastText");
+        if (!toast || !text) return;
+
+        text.textContent = msg;
+
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+
+        toastTimer = setTimeout(() => {
+          toast.classList.remove("show");
+        }, 1800);
+      }
+    
+      function updateCartCount() {
+        const el = document.querySelector(".cart-count");
+        if (!el) return;
+    
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let count = 0;
+        cart.forEach(i => count += i.qty);
+    
+        el.textContent = count;
+      }
+    
+      updateCartCount(); // səhifə açılan kimi say yazılsın
+    
+      document.querySelectorAll(".add-to-cart").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+    
+          const card = btn.closest(".product-card");
+    
+          const product = {
+            id: card.dataset.name,
+            name: card.dataset.name,
+            price: Number(card.dataset.price),
+            img: card.dataset.image,
+            qty: 1
+          };
+    
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const exists = cart.find(x => x.id === product.id);
+    
+          if (exists) exists.qty += 1;
+          else cart.push(product);
+    
+          localStorage.setItem("cart", JSON.stringify(cart));
+          updateCartCount(); // ✅ ƏSAS: refreshsiz dərhal dəyişsin
+          showToast(product.name + " səbətə əlavə edildi ✅");
+        });
+      });
+    
+    });
+  </script>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-copy">© 2025 Nomixaz. Bütün hüquqlar qorunur.</p>
+
+    <div class="footer-right">
+      <a class="footer-link" href="maxfilik-siyaseti.html">Məxfilik Siyasəti</a>
+      </a>
+    </div>
+  </div>
+</footer>
+<!-- ✅ Toast -->
+<div id="toast" class="toast">
+  <span id="toastText"></span>
+</div>
+<script src="card.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

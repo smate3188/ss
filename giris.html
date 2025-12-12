@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomixaz | Giriş</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<header>
+  <div class="logo">
+    <img src="logo.jpeg" alt="Nomix Logo" class="logo">
+    <span>Nomix</span>
+  </div>    
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Ana səhifə</a></li>
+      <li><a href="#support">Dəstək</a></li>
+      <li><a href="geri-qaytarma.html">Geri qaytarma</a></li>
+      <li><a href="elaqe.html">Əlaqə</a></li>
+    </ul>
+  </nav>
+
+  <div class="user-section">
+    <a href="giris.html" class="user-link">
+      <i class="fa-solid fa-user"></i><span>Giriş</span>
+    </a>
+
+    <a href="card.html" class="user-link cart-icon">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+</header>
+<!-- burada sənin HEADER olacaq -->
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    ...
+  </div>
+</div>
+
+<div id="toast" class="toast"><span id="toastText"></span></div>
+<script src="auth.js"></script>
+
+<body>
+
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <h1>Giriş</h1>
+      <p>Nomix hesabına daxil ol</p>
+
+      <form id="loginForm">
+        <input id="loginEmail" class="auth-input" type="email" placeholder="E-mail" required />
+        <input id="loginPass" class="auth-input" type="password" placeholder="Şifrə" required />
+        <button class="auth-btn" type="submit">Daxil ol</button>
+      </form>
+
+      <div class="auth-links">
+        <a href="forgot.html">Şifrəni unutdum</a>
+        <a class="register" href="qeydiyyat.html">Qeydiyyat</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"><span id="toastText"></span></div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
+
